@@ -16,4 +16,12 @@ export default gql`
     text: String!
     user: User!
   }
+
+  extend type Subscription {
+    messageCreated: MessageCreated!
+  }
+
+  type MessageCreated {
+    message: Message!
+  }
 `;
